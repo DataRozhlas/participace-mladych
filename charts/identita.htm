@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Highcharts Example</title>
+
+		<style type="text/css">
+
+		</style>
+	</head>
+	<body>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://code.highcharts.com/highcharts.js"></script>
+
+<div id="identita" style="min-width: 310px; height: 600px; margin: 0 auto"></div>
+
+<script type="text/javascript">
+
+var colors = ['#EA614A', '#20649B', '#008836', '#6B96CA', '#A38456', '#A87A93', '#D19C95']
+
+var data = [
+  ["Jsem hrdý Evropan","Jsem hrdý Čech","Svět by byl lepší místo, kdyby všichni byli jako Češi"],
+  ["Silně souhlasím",21.1,25.4,3],
+  ["Souhlasím",44.8,39.6,13.4],
+  ["Ani tak, ani tak",26.1,22.5,37.6],
+  ["Nesouhlasím",5.9,9.7,35.1],
+  ["Silně nesouhlasím",2.1,2.8,10.9]
+]
+
+var akce = data[0];
+
+var legenda = data.map(function(d) {
+  return d[0];
+}); legenda.shift();
+
+var silnesouhlasim = data[1]; silnesouhlasim.shift();
+
+var souhlasim = data[2]; souhlasim.shift();
+
+var anitak = data[3]; anitak.shift();
+
+var nesouhlasim = data[4]; nesouhlasim.shift();
+
+var silnenesouhlasim = data[5]; silnenesouhlasim.shift();
+
+Highcharts.chart('identita', {
+    chart: {
+        type: 'bar'
+    },
+    title: {
+        text: 'Identita s češstvím/evropanstvím'
+    },
+    subtitle: {
+        text: 'na vzorku 1 345 Čechů od 16 do 26 let'
+    },
+    xAxis: {
+        categories: akce
+    },
+    yAxis: {
+        title: {
+            text: ''
+        },
+        labels: {
+            format: '{value} %'
+        },
+        reversedStacks: false
+    },
+    exporting: {
+        enabled: false
+    },
+    credits: {
+        href: 'http://www.catcheyou.eu',
+        text: 'Zdroj: CatchEyoU'
+    },
+    tooltip: {
+        shared: true,
+        pointFormat: '<span style="color:{series.color}; font-weight: bold;">• {series.name}</span>:<b> {point.y}' + ' %' + '<br/></b>'
+    },
+    plotOptions: {
+        series: {
+            stacking: 'stacked'
+        }
+    },
+    series: [{
+        name: 'silně souhlasím',
+        data: silnesouhlasim,
+        color: colors[1]
+    }, {
+        name: 'souhlasím',
+        data: souhlasim,
+        color: colors[3]
+    }, {
+        name: 'ani tak, ani tak',
+        data: anitak,
+        color: colors[4]
+    }, {
+        name: 'nesouhlasím',
+        data: nesouhlasim,
+        color: colors[5]
+    }, {
+        name: 'silně nesouhlasím',
+        data: silnenesouhlasim,
+        color: colors[0]
+    }]
+});
+
+		</script>
+	</body>
+</html>

@@ -28,7 +28,7 @@ var nesouhlasim = dataID[4]; nesouhlasim.shift();
 var silnenesouhlasim = dataID[5]; silnenesouhlasim.shift();
 
 var dataPT = [
-  ["Sdílení politického obsahu na sociální síti","Darování peněz na řešení sociálního problému","Podpis petice","Členství v sociální nebo politické skupině na sociální síti","Diskuze o sociálních nebo politických tématech na internetu","Dobrovolničení nebo práce na řešení sociálních problémů","Účast na koncertu k sociálnímu nebo politickému tématu","Bojkot nebo nákup produktů z politických, etických nebo enviromentálních důvodů","Nošení trička nebo odznaku s politickým prohlášením","Účast na internetovém protestu nebo bojkotu","Oslovení politika nebo úředníka, například e-mailem","Účast na demonstraci nebo stávce","Práce pro politickou stranu nebo kandidáta","Darování peněz na podporu politické skupiny nebo orgnaizace","Vytvoření online politického obsahu, například videa, webové stránky nebo blogpostu","Nasprejování nebo vylepení politické zprávy na zeď","Politická akce s fyzickou konfrontací s oponenty nebo policií","Obsazení budovy nebo veřejného prostoru"],
+  ["Sdílení politického obsahu na sociální síti","Darování peněz na řešení sociálního problému","Podpis petice","Členství v sociální nebo politické skupině na sociální síti","Diskuse o sociálních nebo politických tématech na internetu","Dobrovolničení nebo práce na řešení sociálních problémů","Účast na koncertu k sociálnímu nebo politickému tématu","Bojkot nebo nákup produktů z politických, etických nebo enviromentálních důvodů","Nošení trička nebo odznaku s politickým prohlášením","Účast na internetovém protestu nebo bojkotu","Oslovení politika nebo úředníka, například e-mailem","Účast na demonstraci nebo stávce","Práce pro politickou stranu nebo kandidáta","Darování peněz na podporu politické skupiny nebo orgnaizace","Vytvoření online politického obsahu, například videa, webové stránky nebo blogpostu","Nasprejování nebo vylepení politické zprávy na zeď","Politická akce s fyzickou konfrontací s oponenty nebo policií","Obsazení budovy nebo veřejného prostoru"],
   ["Vůbec",61.7,64.4,65.7,67.3,70.2,75.7,75.8,77.3,89.7,90.3,93.3,93.9,95.6,96.1,96.6,96.7,96.9,98.5],
   ["Výjimečně",15.4,14.7,20.9,14.1,11.4,8.4,12.0,7.3,4.0,5.2,3.8,4.0,2.2,2.1,1.1,1.9,1.9,0.9],
   ["Někdy",14.9,16.6,10.4,12.3,11.3,10.2,9.0,7.8,3.9,2.7,1.8,1.6,1.5,1.2,1.5,1.0,0.8,0.4],
@@ -60,7 +60,7 @@ Highcharts.chart('identita', {
         text: 'Identita s češstvím/evropanstvím'
     },
     subtitle: {
-        text: 'na vzorku 1 345 Čechů od 16 do 26 let'
+        text: 'na vzorku 1345 Čechů od 16 do 26 let'
     },
     xAxis: {
         categories: akceID
@@ -72,6 +72,7 @@ Highcharts.chart('identita', {
         labels: {
             format: '{value} %'
         },
+        max: 100,
         reversedStacks: false
     },
     exporting: {
@@ -121,7 +122,7 @@ Highcharts.chart('participace', {
         text: 'Zapojení do politiky'
     },
     subtitle: {
-        text: 'na vzorku 1 345 Čechů od 16 do 26 let'
+        text: 'na vzorku 1345 Čechů od 16 do 26 let'
     },
     xAxis: {
         categories: akcePT

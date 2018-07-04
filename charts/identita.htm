@@ -90,19 +90,23 @@ Highcharts.chart('identita', {
     }, {
         name: 'souhlasím',
         data: souhlasim,
-        color: colors[3]
+        color: colors[3],
+        linkedTo: ':previous'
     }, {
         name: 'ani tak, ani tak',
         data: anitak,
-        color: colors[4]
+        color: colors[4],
+        linkedTo: ':previous'
     }, {
         name: 'nesouhlasím',
         data: nesouhlasim,
-        color: colors[5]
+        color: colors[5],
+        linkedTo: ':previous'
     }, {
         name: 'silně nesouhlasím',
         data: silnenesouhlasim,
-        color: colors[0]
+        color: colors[0],
+        linkedTo: ':previous'
     }]
 });
 
